@@ -15,4 +15,8 @@ public class Topic {
     @ManyToOne
     @JoinColumn(name = "lesson_id")
     private Lesson lesson;
+
+    @ManyToOne
+    @JoinColumn(name = "offer_id")
+    private Offer offer;
 }
