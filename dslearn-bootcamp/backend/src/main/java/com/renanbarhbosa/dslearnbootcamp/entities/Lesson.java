@@ -38,11 +38,13 @@ public abstract class Lesson implements Serializable {
     )
     private Set<Enrollment> enrollmentsDone = new HashSet<>();
 
+    @OneToMany(mappedBy = "lesson")
+    private List<Topic> topics = new ArrayList<>();
+
     public Lesson() {
     }
 
     public Lesson(Long id, String title, Integer position, Section section) {
-        super();
         this.id = id;
         this.title = title;
         this.position = position;
@@ -87,6 +89,10 @@ public abstract class Lesson implements Serializable {
 
     public List<Deliver> getDeliveries() {
         return deliveries;
+    }
+
+    public List<Topic> getTopics() {
+        return topics;
     }
 
     @Override
