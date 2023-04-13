@@ -19,4 +19,12 @@ public class Topic {
     @ManyToOne
     @JoinColumn(name = "offer_id")
     private Offer offer;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User likes;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User author;
 }
