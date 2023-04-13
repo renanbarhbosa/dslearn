@@ -89,6 +89,10 @@ public class Offer implements Serializable {
         return resources;
     }
 
+    public List<Topic> getTopics() {
+        return topics;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
